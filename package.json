@@ -1,0 +1,12 @@
+{
+  "name": "industrial-ct-inspection-workbench",
+  "private": true,
+  "version": "0.1.0",
+  "workspaces": ["apps/*"],
+  "scripts": {
+    "dev": "concurrently -n api,web -c green,cyan "npm run dev -w @lab/api" "npm run dev -w @lab/web"",
+    "build": "npm run build -w @lab/api && npm run build -w @lab/web",
+    "start": "npm run start -w @lab/api"
+  },
+  "devDependencies": {"concurrently":"^9.1.2"}
+}
